@@ -8,7 +8,7 @@ def login(username, password):
         _username = user[0]
         _password = user[1]
         if _username == username and _password == password:
-            print("You are logged in!")
+            return 'You are logged in!'
         else:
             return "Invalid credentials"
 
@@ -35,12 +35,12 @@ def signup(username, password):
 
     # Next, check if there are too many accounts
     if len(users) >= 5:
-        print("Too many users")
+        return("Too many users")
     else:
         file = open('accounts.txt', 'a')
-        file.write('\n' + username + ' ' + password)
+        file.write(username + ' ' + password + '\n' )
         file.close()
-        print("Account created!")
+        return ("Account created!")
 
 if __name__ == '__main__':
     # Generic welcome message for the cli
