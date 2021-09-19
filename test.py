@@ -18,7 +18,7 @@ def test_maxAccoutns():
     assert login_cli.signup('username3', 'password')
     assert login_cli.signup('username4', 'password')
     assert login_cli.signup('username5', 'password')
-    assert login_cli.signup('username6', 'password') == 'Max Accounts'
+    assert login_cli.signup('username6', 'password') == 'Too many users'
 
 #print(login_cli.signup('username2', 'password'))
 #print(login_cli.login('username2', 'password'))

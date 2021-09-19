@@ -35,7 +35,7 @@ def signup(username, password):
 
     # Next, check if there are too many accounts
     if len(users) >= 5:
-        return("Max Accounts")
+        return("Too many users")
     else:
         file = open('accounts.txt', 'a')
         file.write(username + ' ' + password + '\n' )
