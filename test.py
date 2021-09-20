@@ -3,26 +3,28 @@ import login_cli
 
 file = open('accounts.txt', 'w')
 
-def test_createAccount():
-    assert login_cli.signup('username1', 'password') == "Account created!"
-    #assert login_cli.signup('username1', 'password') == 'Username already exists'
-    #assert login_cli.signup('username2', 'password') == "Account created!"
-    #assert login_cli.signup('username3', 'password') == "Account created!"
-    #assert login_cli.signup('username4', 'password') == "Account created!"
-    #assert login_cli.signup('username5', 'password') == "Account created!"
 
-def test_uniqueUsername():
-    assert login_cli.signup('username1', 'password') == 'Username already exists'
 
-def test_maxAccoutns():
-    assert login_cli.signup('username2', 'password')
-    assert login_cli.signup('username3', 'password')
-    assert login_cli.signup('username4', 'password')
-    assert login_cli.signup('username5', 'password')
-    assert login_cli.signup('username6', 'password') == 'Too many users'
+def test_signup():
+    #Test Password - 8 <= length <= 12, 1 digit, 1 nonalpha character
+    assert login_cli.ifPasswordValid('Password1!') == True
+    assert login_cli.ifPasswordValid('sDk123!') == False
+    assert login_cli.ifPasswordValid('passcodE45123*') == False
+    assert login_cli.ifPasswordValid('Password123') == False
+    #Test Account Creation
+    assert login_cli.signup('username1', 'Password1!') == 'Account created!'
+    assert login_cli.signup('username2', 'Password1!') == 'Account created!'
+    #Test Unique Username
+    assert login_cli.ifNameValid('username1') == False
+    assert login_cli.ifNameValid('username2') == False
+    assert login_cli.signup('username1', 'Password1!') == 'Username already exists'
+    #Max Users
+    login_cli.signup('username3', 'Password1!')
+    login_cli.signup('username4', 'Password1!')
+    login_cli.signup('username5', 'Password1!')
+    assert login_cli.signup('username6', 'Password1!') == 'Too many users'
+    assert login_cli.signup('username7', 'Password1!') == 'Too many users'
 
-#print(login_cli.signup('username2', 'password'))
-#print(login_cli.login('username2', 'password'))
 
 def test_login():
     file = open('accounts.txt', 'w')
@@ -47,6 +49,7 @@ def test_ifPasswordValid():
     assert login_cli.ifPasswordValid("@Cccccccc") == False
     assert login_cli.ifPasswordValid("2ccccccccdsfsdfdsf") == False
 
+## history.py is removed from this project.
 ##def test_makeDict():
 ##    assert history.makeDict("admin", "1234567") == {"username":"admin", "password":"1234567"}
 ##    assert history.makeDict("admin12", "123fdr") == {"username":"admin12", "password":"123fdr"}
@@ -68,3 +71,5 @@ def test_ifPasswordValid():
 
 
 file.close()
+
+
