@@ -1,7 +1,9 @@
-import re
+from re import search
 from login_cli import login
 from login_cli import getUsers
 from login_cli import signup
+from login_cli import ifPasswordValid
+from login_cli import ifNameValid
 from history import loginRecordQuery
 from history import loginRecordAppend
 from history import  makeDict
@@ -9,7 +11,7 @@ from history import  makeDict
 
 class UI:
     def __init__(self):
-        pass
+        self.loggedIn = False
 
     def loginUI(self):
         print("\n\n\n*******************************\n")
@@ -19,6 +21,8 @@ class UI:
         print("\n*******************************\n\n\n")
         inpt = input("Go to: ")
         if inpt == "1":
+            if self.loggedIn == True:
+                return self.mainUI()
             username_inpt = input("username: ")
             password_inpt = input("password: ")
             if loginRecordQuery(username_inpt, password_inpt) == True:
@@ -35,12 +39,25 @@ class UI:
         elif inpt == "2":
             username_inpt = input("username: ")
             password_inpt = input("password: ")
-            loginRes = login_cli.signup(username_inpt, password_inpt)
+            if ifNameValid(username_inpt) == False:
+                print("User name existed!\n")
+                return self.loginUI()
+            if ifPasswordValid(password_inpt) == False:
+                print("Invalid Password!\n")
+                print("Password need to be:\n")
+                print("8 <= length <= 12\n")
+                print("Have at least 1 cap letter\n")
+                print("Have at least 1 digit\n")
+                print("Have at least 1 non-alpha character\n")
+                return self.loginUI()
+            loginRes = signup(username_inpt, password_inpt)
             if loginRes == "Account created!":
                 user = makeDict(username_inpt, password_inpt)
                 loginRecordAppend(user)
+                print("Account created!")
                 return self.mainUI()
             else:
+                print(loginRes)
                 return self.loginUI()
                     
         elif inpt == "3":
@@ -52,6 +69,7 @@ class UI:
 
         
     def mainUI(self):
+        self.loggedIn = True
         print("\n\n\n*******************************\n")
         print("1. Search a job\n")
         print("2. Find someone\n")
@@ -68,6 +86,8 @@ class UI:
             return self.mainUI()
         elif inpt == "3":
             return self.skillUI()
+        elif inpt == "4":
+            return self.loginUI()
         else:
             print("Invalid entry, please try again.\n")
             return self.mainUI()
@@ -89,7 +109,7 @@ class UI:
         if x != None:
             print("Under construction\n")
             return self.skillUI()
-        elif x == "6":
+        elif inpt == "6":
             return self.mainUI()
         else:
             print("Invalid entry, please try again.\n")
