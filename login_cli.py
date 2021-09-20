@@ -1,6 +1,9 @@
 import fire
 import welcome
 import string
+#from history import loginRecordAppend
+#from history import loginRecordQuery
+#from history import makeDict
 
 # Test if the username is valid.
 # Added by Wenchao 9/19/2021 23:00
@@ -10,6 +13,7 @@ def ifNameValid(username):
     for user in users:
         _username = user[0]
         if _username == username:
+            print("User name existed!\n")
             return False
     return True
 
@@ -33,6 +37,12 @@ def ifPasswordValid(Password):
     if length <= 12 and length >= 8 and capNum >=1 and digitNum >=1 and sepecialNum >=1:
         return True
     else:
+        print("Invalid Password!\n")
+        print("Password need to be:\n")
+        print("8 <= length <= 12\n")
+        print("Have at least 1 cap letter\n")
+        print("Have at least 1 digit\n")
+        print("Have at least 1 non-alpha character\n")
         return False
     
 
@@ -44,6 +54,8 @@ def login(username, password):
         _username = user[0]
         _password = user[1]
         if _username == username and _password == password:
+##            user = makeDict(username, password)
+##            loginRecordAppend(user)
             return 'You are logged in!'
         else:
             return "Invalid credentials"
@@ -76,6 +88,8 @@ def signup(username, password):
         file = open('accounts.txt', 'a')
         file.write(username + ' ' + password + '\n' )
         file.close()
+##        user = makeDict(username, password)
+##        loginRecordAppend(user)
         return ("Account created!")
 
 if __name__ == '__main__':

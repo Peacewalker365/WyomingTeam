@@ -4,9 +4,9 @@ from login_cli import getUsers
 from login_cli import signup
 from login_cli import ifPasswordValid
 from login_cli import ifNameValid
-from history import loginRecordQuery
-from history import loginRecordAppend
-from history import  makeDict
+##from history import loginRecordQuery
+##from history import loginRecordAppend
+##from history import  makeDict
 
 
 class UI:
@@ -25,35 +25,27 @@ class UI:
                 return self.mainUI()
             username_inpt = input("username: ")
             password_inpt = input("password: ")
-            if loginRecordQuery(username_inpt, password_inpt) == True:
+##            if loginRecordQuery(username_inpt, password_inpt) == True:
+##                return self.mainUI()
+            if login(username_inpt, password_inpt) == 'You are logged in!':
+                #user = makeDict(username_inpt, password_inpt)
+                #loginRecordAppend(user)
+                print("You are logged in!")
                 return self.mainUI()
             else:
-                if login(username_inpt, password_inpt) == 'You are logged in!':
-                    user = makeDict(username_inpt, password_inpt)
-                    loginRecordAppend(user)
-                    return self.mainUI()
-                else:
-                    print("Invalid credentials")
-                    return self.loginUI()
+                print("Invalid credentials")
+                return self.loginUI()
                          
         elif inpt == "2":
             username_inpt = input("username: ")
             password_inpt = input("password: ")
             if ifNameValid(username_inpt) == False:
-                print("User name existed!\n")
                 return self.loginUI()
             if ifPasswordValid(password_inpt) == False:
-                print("Invalid Password!\n")
-                print("Password need to be:\n")
-                print("8 <= length <= 12\n")
-                print("Have at least 1 cap letter\n")
-                print("Have at least 1 digit\n")
-                print("Have at least 1 non-alpha character\n")
                 return self.loginUI()
             loginRes = signup(username_inpt, password_inpt)
             if loginRes == "Account created!":
-                user = makeDict(username_inpt, password_inpt)
-                loginRecordAppend(user)
+                
                 print("Account created!")
                 return self.mainUI()
             else:
