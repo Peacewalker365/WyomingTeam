@@ -4,6 +4,8 @@ from login_cli import getUsers
 from login_cli import signup
 from login_cli import ifPasswordValid
 from login_cli import ifNameValid
+import display
+import textDepot
 ##from history import loginRecordQuery
 ##from history import loginRecordAppend
 ##from history import  makeDict
@@ -12,13 +14,18 @@ from login_cli import ifNameValid
 class UI:
     def __init__(self):
         self.loggedIn = False
+        self.name = ""
 
     def loginUI(self):
-        print("\n\n\n*******************************\n")
+        if self.loggedIn == False:
+            display.story(textDepot.storyList)
+        print("\n*******************************\n")
         print("1. Sign in\n")
         print("2. Sign up\n")
         print("3. Quit\n")
-        print("\n*******************************\n\n\n")
+        if self.loggedIn == False:
+            print("4. Watch the video\n")
+        print("\n*******************************\n")
         inpt = input("Go to: ")
         if inpt == "1":
             if self.loggedIn == True:
@@ -31,6 +38,7 @@ class UI:
                 #user = makeDict(username_inpt, password_inpt)
                 #loginRecordAppend(user)
                 print("You are logged in!")
+                self.name = username_inpt
                 return self.mainUI()
             else:
                 print("Invalid credentials")
@@ -54,6 +62,8 @@ class UI:
                     
         elif inpt == "3":
             return
+        elif inpt == "4" and self.loggedIn == False:
+            return self.videoUI()
         else:
             print("Invalid entry, please try again.\n")
             return self.loginUI()
@@ -62,17 +72,16 @@ class UI:
         
     def mainUI(self):
         self.loggedIn = True
-        print("\n\n\n*******************************\n")
+        print("\n*******************************\n")
         print("1. Search a job\n")
         print("2. Find someone\n")
         print("3. Learn a new skill\n")
         print("4. Log out\n")
-        print("\n*******************************\n\n\n")
+        print("\n*******************************\n")
 
         inpt = input("Go to: ")
         if inpt == "1":
-            print("Under construction\n")
-            return self.mainUI()
+            return self.jobSearchUI()
         elif inpt == "2":
             print("Under construction\n")
             return self.mainUI()
@@ -107,5 +116,45 @@ class UI:
             print("Invalid entry, please try again.\n")
             return self.skillUI()
             
+    def videoUI(self):
+        display.video()
+        display.menu(["Go back"])
+        inpt = input("Go to: ")
         
+        while inpt != "1":
+            print("invalid option")
+            inpt = input("Go to: ")
+        return self.loginUI()
+
+    def jobSearchUI(self):
+        display.menu(["Post a job", "Go back"])
+
+        inpt = input("Go to: ")
+        
+        if inpt == "1":
+            f = open('jobDepot.txt', 'a')
+
+            poster = self.name
+            
+            title = input("title: ")
+
+            description = input("description: ")
+
+            employer = input("employer: ")
+
+            location = input("location: ")
+
+            salary = input("salary: ")
+
+            f.write(poster + " " + title + " " + description
+                    + " " + employer + " " + location
+                    + " " + salary + "\n")
+            f.close()
+            return self.mainUI()
+        
+        elif inpt == "2":
+            return self.mainUI()
+        else:
+            print("invalid option")
+            return self.jobSearchUI()
     

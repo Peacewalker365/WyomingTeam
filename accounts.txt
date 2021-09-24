@@ -1,2 +1,2 @@
-admin Password123!
+admin admin
 

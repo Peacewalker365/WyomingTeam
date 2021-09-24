@@ -4,7 +4,7 @@ import login_cli
 file = open('accounts.txt', 'w')
 
 
-
+#Week1
 def test_signup():
     #Test Password - 8 <= length <= 12, 1 digit, 1 nonalpha character
     assert login_cli.ifPasswordValid('Password1!') == True
@@ -25,18 +25,18 @@ def test_signup():
     assert login_cli.signup('username6', 'Password1!') == 'Too many users'
     assert login_cli.signup('username7', 'Password1!') == 'Too many users'
 
-
+#Week1
 def test_login():
     file = open('accounts.txt', 'w')
     login_cli.signup('username2', 'password')
     assert login_cli.login('username2', 'password') == 'You are logged in!'
     assert login_cli.login('username2', 'password123') == 'Invalid credentials'
-
+#Week1
 def test_ifNameValid():
     login_cli.signup('username2', 'password')
     assert login_cli.ifNameValid("username2") == False
     assert login_cli.ifNameValid("Bill") == True
-
+#Week1
 def test_ifPasswordValid():
     
     assert login_cli.ifPasswordValid("CCcccc123!") == True
@@ -49,7 +49,14 @@ def test_ifPasswordValid():
     assert login_cli.ifPasswordValid("@Cccccccc") == False
     assert login_cli.ifPasswordValid("2ccccccccdsfsdfdsf") == False
 
-## history.py is removed from this project.
+
+
+
+
+
+
+#Week1
+## history.py is removed from this project for now.
 ##def test_makeDict():
 ##    assert history.makeDict("admin", "1234567") == {"username":"admin", "password":"1234567"}
 ##    assert history.makeDict("admin12", "123fdr") == {"username":"admin12", "password":"123fdr"}

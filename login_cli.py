@@ -1,6 +1,7 @@
 import fire
 import welcome
 import string
+import display
 #from history import loginRecordAppend
 #from history import loginRecordQuery
 #from history import makeDict
