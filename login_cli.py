@@ -57,24 +57,27 @@ def login(username, password):
         if _username == username and _password == password:
 ##            user = makeDict(username, password)
 ##            loginRecordAppend(user)
-            return 'You are logged in!'
-        else:
-            return "Invalid credentials"
+            print('You are logged in!')
+            return True
+    print("Invalid credentials")
+    return False
 
 def getUsers():
     users = []
     file = open('accounts.txt', 'r')
     # Get each line from the file and extract the user data
-    for line in file:
+    lines = file.readlines()
+    for line in lines:
         user = line.replace('\n', '').split(' ')
         # We are appending an array with the user data i.e. ['johndoe123', 'mypassword123']
         users.append(user)
+        
     file.close()
     return users
 
 # Appends the user to the accounts.txt as a new line
 # If there are more than 5 users, then no account may be created
-def signup(username, password):
+def signup(username, password, firstname, lastname):
     users = getUsers()
     # First, we will check if the username is unique
     for user in users:
@@ -87,7 +90,7 @@ def signup(username, password):
         return("Too many users")
     else:
         file = open('accounts.txt', 'a')
-        file.write(username + ' ' + password + '\n' )
+        file.write(username + ' ' + password + ' ' + firstname + ' ' + lastname + '\n' )
         file.close()
 ##        user = makeDict(username, password)
 ##        loginRecordAppend(user)

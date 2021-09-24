@@ -34,24 +34,25 @@ class UI:
             password_inpt = input("password: ")
 ##            if loginRecordQuery(username_inpt, password_inpt) == True:
 ##                return self.mainUI()
-            if login(username_inpt, password_inpt) == 'You are logged in!':
+            if login(username_inpt, password_inpt) == True:
                 #user = makeDict(username_inpt, password_inpt)
                 #loginRecordAppend(user)
-                print("You are logged in!")
                 self.name = username_inpt
                 return self.mainUI()
             else:
-                print("Invalid credentials")
                 return self.loginUI()
                          
         elif inpt == "2":
             username_inpt = input("username: ")
             password_inpt = input("password: ")
+            firstname_inpt = input("firstname: ")
+            lastname_inpt = input("lastname: ")
+            
             if ifNameValid(username_inpt) == False:
                 return self.loginUI()
             if ifPasswordValid(password_inpt) == False:
                 return self.loginUI()
-            loginRes = signup(username_inpt, password_inpt)
+            loginRes = signup(username_inpt, password_inpt, firstname_inpt, lastname_inpt)
             if loginRes == "Account created!":
                 
                 print("Account created!")
