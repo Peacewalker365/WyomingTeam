@@ -1,0 +1,177 @@
+* 9b393bf (HEAD -> main, origin/main, origin/HEAD) Update history.txt
+* 463e03b update
+* 86399e8 Update test_utils.py
+*   8c20a51 Merge pull request #45 from USFCEN4020/Week10_re
+|\  
+| * d3d3328 (origin/Week10_re, Week10_re) added test case
+* | a990b0b Merge pull request #44 from USFCEN4020/Week10_re
+|\| 
+| * d80b8c2 Update api.py
+| * 1e266b3 update
+| * 01697d1 update
+| * 4cb7ebf update
+| * 7af5df8 API update
+| * 7e320aa Update api.py
+| * 047a100 Create api.py
+|/  
+* 5385772 fixed bug
+* f42b6c1 fixed bug
+| *   55a3eea (refs/stash) On week10: !!GitHub_Desktop<week10>
+| |\  
+| | * 170cd5c index on week10: 50f5168 Most features for week10 completed
+| |/  
+| * 50f5168 (origin/week10, week10) Most features for week10 completed
+| | * 9806206 (origin/api_create_user_feature) bug fixed
+| | * 5536f1f added api endpoint to create new user
+| |/  
+|/|   
+* | b2c2961 Update test_utils.py
+* |   55d8e4a Merge pull request #41 from USFCEN4020/week9
+|\ \  
+| * \   9a1b407 (origin/week9) Merge branch 'main' into week9
+| |\ \  
+| |/ /  
+|/| |   
+* | | 76aa391 added test case
+* | | ec0bbe5 modified helper
+* | | 331beab Add two UI tests, modify list carousel
+| * | 5451156 Revert "-added test calse"
+| * | cd1f378 Revert "undo the commit"
+| * | 2a920c0 undo the commit
+| * | b7307e3 -added test calse
+| |/  
+| * 71e1a28 fix
+| * c2d3bfa features for epic 9
+|/  
+*   b9fb46b Merge pull request #39 from USFCEN4020/Week8-Tests
+|\  
+| * 3f92ee8 (origin/Week8-Tests) Add files via upload
+|/  
+* 35027e7 Revert "Pushed testing for week 8"
+* bf5cae3 Pushed testing for week 8
+*   4c3770e Merge pull request #38 from USFCEN4020/week8
+|\  
+| * f64e80d (origin/week8, week8) -adjusted test cases
+| * 875e1fe -logic fix
+| * bf7019f -added features
+|/  
+* a425b82 added test cases
+*   f8defb7 Merge pull request #37 from USFCEN4020/refactor2
+|\  
+| * 2cdea69 (origin/refactor2) Fix main config again
+| * ff34f89 Fixed main config for UI
+| * de6621b Added UI tests. Minor code refactor.
+|/  
+*   b8704ef Merge pull request #35 from USFCEN4020/refactor
+|\  
+| * b52e57b (origin/refactor, origin/Epic#7) added feature
+| * e8c0df0 added features
+| * 306c8b0 edited testcase
+| * 4234881 added feature
+| * 6915d6d added feature
+| * 60f4906 Refactor part 1: jobs, [], names
+* | 2d9fddf Update testing workflow file
+* | 676aadb Create testing workflow
+|/  
+*   13d6711 Merge branch 'main' of https://github.com/USFCEN4020/CEN4020F21TeamWyoming
+|\  
+| *   15762c0 Merge pull request #34 from USFCEN4020/challenge6-tests
+| |\  
+| | * 981f8f3 (origin/challenge6-tests) Implement challenge6 tests
+| |/  
+* / cb6e7c8 Create history.txt
+|/  
+*   8bbc364 Merge pull request #32 from USFCEN4020/challenge6
+|\  
+| * 0ab70bf (origin/challenge6) Finished functions
+| * be8f097 Implement challenge 7 requirements
+* |   5852464 (origin/Week6) Merge pull request #31 from USFCEN4020/week5
+|\ \  
+| |/  
+|/|   
+| *   464ebf9 (origin/week5) Merge pull request #30 from USFCEN4020/Week5_test
+| |\  
+| | * f340140 (origin/Week5_test) Test cases added
+* | | 0f5aa24 Merge pull request #29 from USFCEN4020/week5
+|\| | 
+| * | 967f233 fixed bug when disconnecting from friend
+| * | b669c6e fixed bug in search
+| |/  
+| * fbed396 integrated search into UI. Implemented friend request system
+| * 3078aca Finished fried list feature, Can view profile of friend and disconnect from friend
+| * ce55506 Display friends and relavent info feature implemented
+* | 73eab2d Merge pull request #28 from USFCEN4020/search_students_feature
+|\| 
+| * 27e2f45 (origin/search_students_feature) search_student now works for major and university
+| * d2134dd added function to search students by lastname, major or uni
+| * bb15ecc incrased num of account from 5 to 10
+|/  
+*   fe92034 Merge pull request #20 from USFCEN4020/week4
+|\  
+| *   c22b720 (origin/week4) Merge pull request #21 from USFCEN4020/week4_test
+| |\  
+| | * 3325917 (origin/week4_test) Added 2 test cases
+| |/  
+| * b269115 Missing feature: profile major and university formating
+| * 29418d3 bug fix
+| * fdd146e fixed display_profile
+| * 963ea7c Added explanation to display_profile
+| * 9b106b8 Added check if user exists to display_profile
+| * bf0ac45 switched target paramenter to editSelection
+| * 7b4dba5 Switched f strings to .format
+| * 0df175c Fix
+| * 3f693f1 Finished all requirements
+|/  
+* 2c6677f Add week 3 tests to test/
+*   76d7507 Merge pull request #19 from USFCEN4020/Epic#3-_features
+|\  
+| * b165964 (origin/Epic#3-_features) Bug fixed
+* | 452f8da Merge pull request #13 from USFCEN4020/Epic#3-_features
+|\| 
+| *   1e14036 Merge branch 'main' into Epic#3-_features
+| |\  
+| |/  
+|/|   
+* |   99ccb25 Merge pull request #11 from USFCEN4020/driver-rewrite-main
+|\ \  
+* \ \   8ae890d Merge pull request #8 from USFCEN4020/json-pytest
+|\ \ \  
+| * | | 66ef5c1 Remove prints. Modify errors. Return bool
+* | | |   7e01f43 Merge pull request #12 from USFCEN4020/redo-readme
+|\ \ \ \  
+| * | | | f76c81a Redo readme. Update running instructions.
+|/ / / /  
+| | | * 3bbafed Function rewrited
+| | | * c0b9745 Features Added
+| | | * 87ce8ef Features Added
+| | | * efb8ba7 Feature added
+| | |/  
+| | * a4f0568 Update .gitignore
+| | * 3975ca5 Feature added and bug fixed
+| | * 02c1c84 Fix add job posting error.
+| | * ef51b64 Adding driver changes. Delete extra driver files.
+| |/  
+|/|   
+* |   d4aa76e Merge pull request #6 from USFCEN4020/json-config
+|\ \  
+* \ \   5851337 Merge pull request #5 from USFCEN4020/file-hierarchy
+|\ \ \  
+| | | | * 72a2131 (origin/driver-rewrite) Rewrite driver. Refactor CLI running
+| | | |/  
+| | | * b64938f Add test dir. Use pytest. Add test config
+| | |/  
+| | * 9b51470 (origin/json-config) Rewrite utility functions. Add json
+| |/  
+| * 6211e77 (origin/file-hierarchy) Add requirements.txt
+| * 52f92e0 Add gitignore. Change file hierarchy.
+|/  
+*   317b6ba Merge pull request #4 from USFCEN4020/Wenchao_Branch
+|\  
+| * 664e98d (origin/Wenchao_Branch) Added UI logic flow map
+| * 004c761 Some coding style fix
+* | 094c70a Merge pull request #1 from USFCEN4020/Wenchao_Branch
+|\| 
+| * a84caba Comments added
+| * 54cb044 Structure reDesign
+|/  
+* cdb44fa Ver.1

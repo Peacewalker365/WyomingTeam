@@ -1,0 +1,262 @@
+{
+  "messages": {
+    "welcome": "---------------------------------------\n- THANKS FOR USING THE IN COLLEGE CLI -\n---------------------------------------"
+  },
+  "time_stamps": {
+    "job_deleted": "\"2021-11-02 02:07:51.259619\"",
+    "job_posted": "\"2021-11-23 22:06:03.648263\"",
+    "user_registered": "\"2021-11-23 22:04:14.133080\"",
+    "log_out": "\"2021-11-23 20:23:19.144488\""
+  },
+  "jobs": [
+    {
+      "author": "Admin Admin",
+      "title": "Test Title",
+      "description": "Test Job Description",
+      "employer": "Some Company",
+      "location": "San Jose, CA",
+      "salary": "$7000 a month",
+      "id": "1"
+    },
+    {
+      "author": "test test",
+      "title": "Team Leader",
+      "description": "NA",
+      "employer": "Google",
+      "location": "Sans, CA",
+      "salary": "20,000",
+      "id": "35"
+    },
+    {
+      "author": "test test",
+      "title": "aaa",
+      "description": "aaa",
+      "employer": "aaa",
+      "location": "aaa",
+      "salary": "aaa",
+      "id": "14"
+    }
+  ],
+  "courses": [
+    "Train the trainer",
+    "Understanding the Architectural Design Process",
+    "How to use InCollege learning",
+    "Gamification of Learning",
+    "Project Management Simplified",
+    "How to get your first job!"
+  ],
+  "stories": [
+    "My name is Rajeesh, and I am successful because of InCollege. I worked very hard for my GPA, and I ended up meeting a person here that gave me the job that I always wanted.",
+    "My name is Alex Chen, and I met someone from my favorite robotics starup here on InCollege. I messaged them, and they gave me an offer for $300K a year just like that. Isn't that amazing?",
+    "Hello, my name is Josh, and I did not get a job from InCollege. This was the worst possible app that I have ever seen. Don't use it."
+  ],
+  "accounts": {
+    "admin": {
+      "password": "admin",
+      "firstname": "admin",
+      "lastname": "admin",
+      "membership": "pro",
+      "language": "Spanish",
+      "profile": {
+        "title": "Admin profile title",
+        "major": "Administration",
+        "university": "University Of Admins",
+        "about": "Hello I am an admin.",
+        "experience": [
+          {
+            "title": "Experience Title",
+            "employer": "Nasa",
+            "date_started": "15-sep-2019",
+            "date_ended": "15-sep-2020",
+            "location": "Somewhere",
+            "description": "I worked for NASA"
+          },
+          {
+            "title": "Experience 2 Title",
+            "employer": "NSA",
+            "date_started": "1\b15-sep-2017",
+            "date_ended": "15-sep-2018",
+            "location": "Virginia",
+            "description": "I worked for NSA"
+          }
+        ],
+        "education": [
+          {
+            "name": "University of Souther Florida",
+            "degree": "Administration",
+            "years": "4"
+          },
+          {
+            "name": "University of South Florida",
+            "degree": "Business, duh",
+            "years": "3"
+          }
+        ]
+      },
+      "friends": [
+        "new",
+        "admin"
+      ],
+      "friend_requests": [],
+      "saved_jobs": [
+        "14",
+        "20",
+        "1",
+        "35",
+        "80"
+      ],
+      "applications": {
+        "1": {
+          "grad_date": "w",
+          "start_date": "w",
+          "app_text": "w"
+        },
+        "35": {
+          "grad_date": "",
+          "start_date": "",
+          "app_text": ""
+        }
+      },
+      "inbox": [
+        {
+          "test": "OK, I'll do it today..."
+        }
+      ],
+      "time_stamps": {
+        "log_out": "\"2021-11-02 14:06:40.444268\"",
+        "job_applied": "\"2021-11-02 15:07:55.862033\"",
+        "user_registered": "\"2020-11-02 11:41:06.350453\""
+      },
+      "courses": [
+        "Train the trainer",
+        "Understanding the Architectural Design Process",
+        "How to use InCollege learning",
+        "Gamification of Learning",
+        "Project Management Simplified"
+      ]
+    },
+    "test": {
+      "password": "test",
+      "firstname": "test",
+      "lastname": "test",
+      "membership": "",
+      "language": "English",
+      "profile": {
+        "title": "I a\b\b\bThis a test profile",
+        "major": "Testing",
+        "university": "University of Testing",
+        "about": "Hello I am a test profile",
+        "experience": [],
+        "education": []
+      },
+      "friends": [
+        "admin"
+      ],
+      "friend_requests": [],
+      "saved_jobs": [],
+      "applications": {},
+      "inbox": [
+        {
+          "admin": "Hey Test, did you do the testing?"
+        },
+        {
+          "admin": "[unread]test"
+        },
+        {
+          "admin": "[unread]test"
+        }
+      ],
+      "time_stamps": {
+        "log_out": "\"2021-11-02 13:51:31.958168\"",
+        "user_registered": "\"2020-11-02 11:41:06.350453\""
+      },
+      "courses": []
+    },
+    "new": {
+      "password": "new",
+      "firstname": "new",
+      "lastname": "new",
+      "membership": "",
+      "language": "English",
+      "profile": {
+        "title": "",
+        "major": "",
+        "university": "",
+        "about": "",
+        "experience": [],
+        "education": []
+      },
+      "friends": [
+        "test"
+      ],
+      "friend_requests": [],
+      "saved_jobs": [],
+      "applications": {},
+      "inbox": [
+        {
+          "admin": "Hey new, you've done the work?"
+        }
+      ],
+      "time_stamps": {
+        "log_out": "\"2021-11-02 13:49:32.076654\"",
+        "user_registered": "\"2020-11-02 11:41:06.350453\""
+      },
+      "courses": []
+    },
+    "admin2": {
+      "password": "admin2",
+      "firstname": "admin2",
+      "lastname": "admin2",
+      "membership": "",
+      "language": "English",
+      "profile": {
+        "title": "",
+        "major": "",
+        "university": "",
+        "about": "",
+        "experience": [],
+        "education": []
+      },
+      "friends": [],
+      "friend_requests": [],
+      "saved_jobs": [],
+      "applications": {},
+      "inbox": [],
+      "time_stamps": {
+        "user_registered": "\"2020-11-02 11:41:06.350453\""
+      },
+      "courses": []
+    },
+    "pcewlkr": {
+      "password": "Qwe123!@#$%",
+      "firstname": "Wenchao",
+      "lastname": "Li",
+      "membership": "pro",
+      "language": "English",
+      "profile": {
+        "title": "",
+        "major": "",
+        "university": "",
+        "about": "",
+        "experience": [],
+        "education": []
+      },
+      "friends": [],
+      "friend_requests": [],
+      "applications": {},
+      "saved_jobs": [],
+      "inbox": [],
+      "time_stamps": {
+        "job_applied": "",
+        "user_registered": "\"2021-11-02 11:41:06.350453\"",
+        "log_out": "\"2021-11-02 11:41:40.076997\""
+      },
+      "courses": []
+    }
+  },
+  "current_login": "",
+  "current_login_membership": "",
+  "guest_control": {
+    "admin": []
+  }
+}
